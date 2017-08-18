@@ -4,10 +4,10 @@ import { MediaSamplePage } from './media-sample';
 
 @NgModule({
   declarations: [
-    MediaSamplePage,
+    MediaSamplePage
   ],
   imports: [
-    IonicPageModule.forChild(MediaSamplePage),
+    IonicPageModule.forChild(MediaSamplePage)
   ],
 })
 export class MediaSamplePageModule {}
