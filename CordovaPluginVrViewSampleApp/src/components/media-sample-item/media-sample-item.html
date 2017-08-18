@@ -1,9 +1,31 @@
 <ion-card>
-  <img [src]="mediaSample.previewUrl"/> 
-  <ion-card-header>
-    {{ mediaSample.name }}
-  </ion-card-header>
-  <ion-card-content>
-    {{ mediaSample | mediaSampleDescription }}
-  </ion-card-content>
+  <div class="img-container">
+    <img [src]="mediaSample.previewUrl"/>
+    <img class="play-indicator" 
+      [src]="mediaSample.type == 'VIDEO' ? 'assets/images/play.png' : 'assets/images/panorama.png'" />
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-icon [name]="mediaSample.type == 'VIDEO' ? 'videocam' : 'image'" color="primary" item-left large></ion-icon>
+      <h2>{{ mediaSample.name }}</h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>
+    <ion-col center text-center>
+      <ion-note>
+        {{mediaSample | mediaSampleIsLocal}}
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        {{mediaSample | mediaSampleInputType}}
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center [hidden]="mediaSample.type!='VIDEO'">
+      <ion-note>
+        {{mediaSample | mediaSampleInputFormat}}
+      </ion-note>
+    </ion-col>
+  </ion-row>
 </ion-card>

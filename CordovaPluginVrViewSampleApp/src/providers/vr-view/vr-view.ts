@@ -10,6 +10,8 @@ export class VrViewProvider {
     console.log("Play");
     console.log(mediaSample);
 
+    if(!window['VrView']) { return; }
+
     if(mediaSample.type == "VIDEO") {
       if(mediaSample.isLocal) {
         window['VrView'].playVideoFromAppFolder(
