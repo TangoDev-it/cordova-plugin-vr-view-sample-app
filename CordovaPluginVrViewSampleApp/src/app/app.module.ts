@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -13,7 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ComponentsModule } from '../components/components.module';
 import { ApiProvider } from '../providers/api/api';
-import { HttpModule } from '@angular/http';
+import { VrViewProvider } from '../providers/vr-view/vr-view';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ComponentsModule,
-    HttpModule
+    HttpModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,8 +41,9 @@ import { HttpModule } from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ApiProvider
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ApiProvider,
+    VrViewProvider
   ]
 })
 export class AppModule {}

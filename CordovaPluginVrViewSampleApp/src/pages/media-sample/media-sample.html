@@ -10,7 +10,7 @@
 <ion-content padding>
   <div class="media-sample-container">
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
-    <div *ngFor="let media of mediaSamples">
+    <div *ngFor="let media of mediaSamples" (click)="onMediaSampleitemClick(media)">
       <media-sample-item [mediaSample]="media"></media-sample-item>
     </div>
   </div>

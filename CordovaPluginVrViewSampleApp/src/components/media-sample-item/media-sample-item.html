@@ -1,5 +1,9 @@
 <ion-card>
+  <img [src]="mediaSample.previewUrl"/> 
+  <ion-card-header>
+    {{ mediaSample.name }}
+  </ion-card-header>
   <ion-card-content>
-    {{mediaSample.name}}
+    {{ mediaSample | mediaSampleDescription }}
   </ion-card-content>
 </ion-card>
