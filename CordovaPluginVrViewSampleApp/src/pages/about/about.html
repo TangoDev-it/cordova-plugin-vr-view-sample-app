@@ -13,4 +13,22 @@
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
   </div>
   <div [innerHTML]="infoText"></div>
+  <div [hidden]="!infoText" margin-top>
+    <button ion-button block icon-left (click)="onClickCheckDeviceSupport()">
+      <ion-icon name="settings"></ion-icon>
+      Check device support
+    </button>
+    <button ion-button block icon-left (click)="onClickOpenUrl('https://cordovavrview.tangodev.it/')">
+      <ion-icon name="link"></ion-icon>
+      Website
+    </button>
+    <button ion-button block icon-left (click)="onClickOpenUrl('https://cordovavrview.tangodev.it/docs.html')">
+      <ion-icon name="document"></ion-icon>
+      Documentation
+    </button>
+    <button ion-button block icon-left (click)="onClickOpenUrl('mailto:support@tangodev.it')">
+      <ion-icon name="mail"></ion-icon>
+      Write us
+    </button>
+  </div>
 </ion-content>

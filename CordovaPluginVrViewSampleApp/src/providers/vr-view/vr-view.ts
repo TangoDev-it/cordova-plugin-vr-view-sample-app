@@ -7,10 +7,11 @@ export class VrViewProvider {
   constructor() { }
 
   public playMediaSample(mediaSample : MediaSampleModel) {
-    console.log("Play");
-    console.log(mediaSample);
-
-    if(!window['VrView']) { return; }
+    if(!window['VrView']) {
+      console.log("Play");
+      console.log(mediaSample);
+      return;
+    }
 
     if(mediaSample.type == "VIDEO") {
       if(mediaSample.isLocal) {
@@ -39,6 +40,14 @@ export class VrViewProvider {
         );
       }
     }
+  }
+
+  public checkIsDeviceSupported(callback) {
+    if(!window['VrView']) {
+      callback(1);
+      return;
+    }
+    window['VrView'].isDeviceSupported(callback);
   }
 
 }

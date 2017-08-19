@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
+import { VrViewProvider } from '../../providers/vr-view/vr-view';
+import { ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -17,7 +19,9 @@ export class AboutPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public api: ApiProvider,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public toastCtrl: ToastController,
+    public vrView: VrViewProvider
   ) {
   }
 
@@ -40,4 +44,24 @@ export class AboutPage {
     );
   }
 
+  onClickCheckDeviceSupport() {
+    var callback = (isSupported : number) => {
+      var message;
+      if(isSupported <= 0) {
+        message = "Sorry, your device is not supported :(";
+      } else {
+        message = "Your device is supported! Have fun! :)";
+      }
+      var toast = this.toastCtrl.create({
+        message: message,
+        duration: 3000,
+      });
+      toast.present();
+    }
+    this.vrView.checkIsDeviceSupported(callback);
+  }
+
+  onClickOpenUrl(url : string) {
+    window.open(url, '_system');
+  }
 }
