@@ -20,6 +20,7 @@ export class TryItPage {
     this.mediaSample.type = "VIDEO";
     this.mediaSample.inputType = "TYPE_MONO";
     this.mediaSample.inputFormat = "FORMAT_DEFAULT";
+    this.mediaSample.isLocal = false;
   }
 
   ionViewDidLoad() {}

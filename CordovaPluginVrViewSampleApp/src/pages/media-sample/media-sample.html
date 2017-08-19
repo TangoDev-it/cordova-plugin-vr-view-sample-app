@@ -8,8 +8,11 @@
 
 
 <ion-content padding>
-  <div class="media-sample-container">
+  <div text-center>
+    <ion-spinner [hidden]="!isLoading"></ion-spinner>
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
+  </div>
+  <div class="media-sample-container">
     <div *ngFor="let media of mediaSamples" (click)="onMediaSampleitemClick(media)">
       <media-sample-item [mediaSample]="media"></media-sample-item>
     </div>

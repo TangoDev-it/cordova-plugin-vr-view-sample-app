@@ -6,19 +6,31 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ApiProvider {
-  private apiUrl = 'https://cordovavrview.tangodev.it/api.php';
+  private mediaSamplesApiUrl = 'https://cordovavrview.tangodev.it/media-samples-api.php';
+  private infoTextApiUrl = 'https://cordovavrview.tangodev.it/info-text-api.php';
 
   constructor(public http: Http) {}
 
   getMediaSamples() {
-    return this.http.get(this.apiUrl)
-      .map(this.extractData)
+    return this.http.get(this.mediaSamplesApiUrl)
+      .map(this.extractJsonData)
       .catch(this.handleErrors);
   }
 
-  private extractData(res: Response) {
+  getInfoText() {
+    return this.http.get(this.infoTextApiUrl)
+      .map(this.extractTextData)
+      .catch(this.handleErrors);
+  }
+
+  private extractJsonData(res: Response) {
     let body = res.json();
     return body || { };
+  }
+
+  private extractTextData(res: Response) {
+    let body = res.text();
+    return body || "";
   }
 
   private handleErrors(error: Response) {

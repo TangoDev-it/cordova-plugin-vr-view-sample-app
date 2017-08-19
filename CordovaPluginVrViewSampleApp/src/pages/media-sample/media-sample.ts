@@ -11,7 +11,8 @@ import { VrViewProvider } from '../../providers/vr-view/vr-view';
 })
 export class MediaSamplePage {
   mediaSamples : Array<MediaSampleModel> = [];
-  errorMessage : string = '';
+  errorMessage : string;
+  isLoading: boolean;
 
   constructor(
     public navCtrl: NavController, 
@@ -25,10 +26,17 @@ export class MediaSamplePage {
   }
 
   loadMediaSamples() {
+    this.isLoading = true;
     this.api.getMediaSamples()
       .subscribe(
-        mediaSamples => this.mediaSamples = mediaSamples,
-        error =>  this.errorMessage = <any>error
+        mediaSamples => {
+          this.isLoading = false;
+          this.mediaSamples = mediaSamples;
+        },
+        error => {
+          this.isLoading = false;
+          this.errorMessage
+        }
       );
   }
 

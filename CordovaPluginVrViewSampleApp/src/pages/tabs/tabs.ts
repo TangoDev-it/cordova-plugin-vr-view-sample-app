@@ -9,9 +9,9 @@ import { TryItPage } from '../try-it/try-it';
 })
 export class TabsPage {
 
-  tab1Root = MediaSamplePage;
-  tab2Root = TryItPage;
-  tab3Root = AboutPage;
+  tab1Root = AboutPage;
+  tab2Root = MediaSamplePage;
+  tab3Root = TryItPage;
 
   constructor() {
 
