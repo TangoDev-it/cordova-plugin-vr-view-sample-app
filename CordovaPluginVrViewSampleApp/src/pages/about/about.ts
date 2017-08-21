@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { VrViewProvider } from '../../providers/vr-view/vr-view';
 import { ToastController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
@@ -17,7 +16,6 @@ export class AboutPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams,
     public api: ApiProvider,
     private sanitizer: DomSanitizer,
     public toastCtrl: ToastController,

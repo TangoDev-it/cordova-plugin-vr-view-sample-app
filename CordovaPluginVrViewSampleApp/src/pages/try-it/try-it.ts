@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { MediaSampleModel } from '../../models/media-sample.model';
 import { VrViewProvider } from '../../providers/vr-view/vr-view';
 
-@IonicPage()
 @Component({
   selector: 'page-try-it',
   templateUrl: 'try-it.html',
@@ -12,8 +11,7 @@ export class TryItPage {
   mediaSample: MediaSampleModel;
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
+    public navCtrl: NavController,
     public vrView: VrViewProvider
   ) {
     this.mediaSample = new MediaSampleModel();

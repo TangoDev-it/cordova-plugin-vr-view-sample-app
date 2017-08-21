@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController } from 'ionic-angular';
 import { MediaSampleModel } from '../../models/media-sample.model';
 import { ApiProvider } from '../../providers/api/api';
 import { VrViewProvider } from '../../providers/vr-view/vr-view';
 
-@IonicPage()
 @Component({
   selector: 'page-media-sample',
   templateUrl: 'media-sample.html',
@@ -15,8 +14,7 @@ export class MediaSamplePage {
   isLoading: boolean;
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
+    public navCtrl: NavController,
     public api: ApiProvider,
     public vrView: VrViewProvider
   ) {}
