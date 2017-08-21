@@ -11,30 +11,30 @@
   <div text-center>
     <ion-spinner [hidden]="!isLoading" color="primary"></ion-spinner>
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
-    <button ion-button block icon-left (click)="loadInfoText()" [hidden]="!errorMessage">
+    <button ion-button block icon-left (tap)="loadInfoText()" [hidden]="!errorMessage">
       <ion-icon name="refresh"></ion-icon>
       Retry
     </button>
   </div>
   <div [innerHTML]="infoText"></div>
   <div [hidden]="!infoText" margin-top>
-    <button ion-button block icon-left (click)="onClickCheckDeviceSupport()">
+    <button ion-button block icon-left (tap)="onClickCheckDeviceSupport()">
       <ion-icon name="settings"></ion-icon>
       Check device support
     </button>
-    <button ion-button block icon-left (click)="onClickOpenUrl('https://cordovavrview.tangodev.it/')">
+    <button ion-button block icon-left (tap)="onClickOpenUrl('https://cordovavrview.tangodev.it/')">
       <ion-icon name="link"></ion-icon>
       Plugin website
     </button>
-    <button ion-button block icon-left (click)="onClickOpenUrl('https://cordovavrview.tangodev.it/docs.html')">
+    <button ion-button block icon-left (tap)="onClickOpenUrl('https://cordovavrview.tangodev.it/docs.html')">
       <ion-icon name="document"></ion-icon>
       Plugin documentation
     </button>
-    <button ion-button block icon-left (click)="onClickOpenUrl('https://github.com/TangoDev-it/cordova-plugin-vr-view-sample-app')">
+    <button ion-button block icon-left (tap)="onClickOpenUrl('https://github.com/TangoDev-it/cordova-plugin-vr-view-sample-app')">
       <ion-icon ios="logo-github" md="logo-github"></ion-icon>
       App source code
     </button>
-    <button ion-button block icon-left (click)="onClickOpenUrl('mailto:support@tangodev.it')">
+    <button ion-button block icon-left (tap)="onClickOpenUrl('mailto:support@tangodev.it')">
       <ion-icon name="mail"></ion-icon>
       Write us
     </button>

@@ -11,13 +11,13 @@
   <div text-center>
     <ion-spinner [hidden]="!isLoading" color="primary"></ion-spinner>
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
-    <button ion-button block icon-left (click)="loadMediaSamples()" [hidden]="!errorMessage">
+    <button ion-button block icon-left (tap)="loadMediaSamples()" [hidden]="!errorMessage">
       <ion-icon name="refresh"></ion-icon>
       Retry
     </button>
   </div>
   <div class="media-sample-container">
-    <div *ngFor="let media of mediaSamples" (click)="onMediaSampleitemClick(media)">
+    <div *ngFor="let media of mediaSamples" (tap)="onMediaSampleitemClick(media)">
       <media-sample-item [mediaSample]="media"></media-sample-item>
     </div>
   </div>
