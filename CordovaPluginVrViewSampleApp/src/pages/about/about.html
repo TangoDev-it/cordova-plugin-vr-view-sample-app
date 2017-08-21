@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <div text-center>
-    <ion-spinner [hidden]="!isLoading"></ion-spinner>
+    <ion-spinner [hidden]="!isLoading" color="primary"></ion-spinner>
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
   </div>
   <div [innerHTML]="infoText"></div>
