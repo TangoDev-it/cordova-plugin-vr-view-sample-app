@@ -34,7 +34,7 @@ export class ApiProvider {
   }
 
   private handleErrors(error: Response) {
-    console.log(JSON.stringify(error.json()));
-    return Observable.throw("Sì è verificato un errore di connessione.");
+    console.log("Error API");
+    return Observable.throw("There was an error while loading data.");
   }
 }

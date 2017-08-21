@@ -34,10 +34,11 @@ export class AboutPage {
       infoText => {
         this.isLoading = false;
         this.infoText = this.sanitizer.bypassSecurityTrustHtml(infoText);
+        this.errorMessage = null;
       },
       error => {
         this.isLoading = false;
-        this.errorMessage;
+        this.errorMessage = error;
       }
     );
   }

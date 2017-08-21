@@ -30,10 +30,11 @@ export class MediaSamplePage {
         mediaSamples => {
           this.isLoading = false;
           this.mediaSamples = mediaSamples;
+          this.errorMessage = null;
         },
         error => {
           this.isLoading = false;
-          this.errorMessage
+          this.errorMessage = error;
         }
       );
   }
