@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="it.tangodev.cordovapluginvrviewsampleapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cordova / ionic VR plugin sample</name>
+    <name>Cordova ionic VR plugin sample</name>
     <description>A sample app that demonstrates the features of Cordova / ionic VR plugin.</description>
     <author email="support@tangodev.it" href="http://www.tangodev.it">TangoDev</author>
     <content src="index.html" />
