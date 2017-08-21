@@ -86,4 +86,5 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <engine name="android" spec="~6.1.2" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
 </widget>
