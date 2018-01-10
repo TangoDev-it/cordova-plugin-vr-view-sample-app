@@ -18,3 +18,5 @@ This sample app was created using Ionic v3.6.0.
 [iOS app on AppStore](https://itunes.apple.com/us/app/cordova-ionic-vr-plugin-sample/id1273788778?mt=8)
 
 [Android app on PlayStore](https://play.google.com/store/apps/details?id=it.tangodev.cordovapluginvrviewsampleapp&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+
+
