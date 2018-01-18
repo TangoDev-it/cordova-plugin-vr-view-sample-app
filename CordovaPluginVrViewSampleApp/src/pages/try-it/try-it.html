@@ -37,6 +37,9 @@
       <ion-item>
         <ion-label fixed>Url</ion-label>
         <ion-input type="text" required [(ngModel)]="mediaSample.url" name="url"></ion-input>
+        <button ion-button outline item-end showWhen="android" (tap)="onClickPickFile()">
+          Pick a file
+        </button>
       </ion-item>
     </ion-list>
   </form>
