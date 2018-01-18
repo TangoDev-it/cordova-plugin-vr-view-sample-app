@@ -48,8 +48,10 @@ export class AboutPage {
       var message;
       if(isSupported <= 0) {
         message = "Sorry, your device is not supported :(";
-      } else {
+      } else if(isSupported == 1) {
         message = "Your device is supported! Have fun! :)";
+      } else if(isSupported == 2) {
+        message = "Your device is partially supported";
       }
       var toast = this.toastCtrl.create({
         message: message,
