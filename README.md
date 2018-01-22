@@ -9,6 +9,17 @@ This sample app was created using Ionic v3.6.0.
 
 ![App](https://cordovavrview.tangodev.it/dist/img/slide5.png)
 
+## Getting started ##
+
+1. Download the source code
+2. In the directory `CordovaPluginVrViewSampleApp` launch the command
+```sh
+    npm i
+```
+3. Add the plugin to the project (see the plugin documentation for the command detail)
+4. Add you desired platform and build
+5. Have fun!
+
 ## Useful links ##
 
 [Plugin website](https://cordovavrview.tangodev.it)
