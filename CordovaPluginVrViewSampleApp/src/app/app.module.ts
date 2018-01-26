@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FileChooser } from '@ionic-native/file-chooser';
 
 import { ComponentsModule } from '../components/components.module';
 import { ApiProvider } from '../providers/api/api';
@@ -43,6 +44,7 @@ import { VrViewProvider } from '../providers/vr-view/vr-view';
   providers: [
     StatusBar,
     SplashScreen,
+    FileChooser,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ApiProvider,
     VrViewProvider
