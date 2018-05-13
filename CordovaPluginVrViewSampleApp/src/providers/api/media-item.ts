@@ -15,7 +15,6 @@ export enum MediaType {
 
 
 export class MediaItem {
-
   inputFormat : InputFormat
   inputType  : InputType
   isLocal : boolean

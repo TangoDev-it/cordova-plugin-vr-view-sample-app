@@ -17,15 +17,16 @@ export class VrViewProvider {
       if(mediaSample.isLocal) {
         window['VrView'].playVideoFromAppFolder(
           mediaSample.url, {
-            inputType: mediaSample.inputType, 
+            inputType: mediaSample.inputType,
             inputFormat: mediaSample.inputFormat
           }
         );
       } else {
         window['VrView'].playVideo(
           mediaSample.url, {
-            inputType: mediaSample.inputType, 
-            inputFormat: mediaSample.inputFormat
+            inputType: mediaSample.inputType,
+            inputFormat: mediaSample.inputFormat,
+            startDisplayMode: "DISPLAY_MODE_FULLSCREEN"
           }
         );
       }
