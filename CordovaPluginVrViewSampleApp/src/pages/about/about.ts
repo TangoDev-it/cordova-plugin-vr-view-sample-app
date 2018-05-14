@@ -15,7 +15,7 @@ export class AboutPage {
   isLoading: boolean;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public api: ApiProvider,
     private sanitizer: DomSanitizer,
     public toastCtrl: ToastController,
@@ -33,7 +33,7 @@ export class AboutPage {
     .subscribe(
       infoText => {
         this.isLoading = false;
-        this.infoText = this.sanitizer.bypassSecurityTrustHtml(infoText);
+        this.infoText = this.sanitizer.bypassSecurityTrustHtml('<img src="../../assets/images/LOGO.png" alt="Virtual Learning" height="50%" width="50%" class="center">');
         this.errorMessage = null;
       },
       error => {

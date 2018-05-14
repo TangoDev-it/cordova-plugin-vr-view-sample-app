@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>About</ion-title>
+    <ion-title>Virtual Learning</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,14 +11,14 @@
   <div text-center>
     <ion-spinner [hidden]="!isLoading" color="primary"></ion-spinner>
     <p class="error-message" text-center [hidden]="!errorMessage">{{errorMessage}}</p>
-    <button ion-button block icon-left (tap)="loadInfoText()" [hidden]="!errorMessage">
+  <!--  <button ion-button block icon-left (tap)="loadInfoText()" [hidden]="!errorMessage">
       <ion-icon name="refresh"></ion-icon>
       Retry
-    </button>
+    </button> -->
   </div>
   <div [innerHTML]="infoText"></div>
   <div [hidden]="!infoText" margin-top>
-    <button ion-button block icon-left (tap)="onClickCheckDeviceSupport()">
+   <!-- <button ion-button block icon-left (tap)="onClickCheckDeviceSupport()">
       <ion-icon name="settings"></ion-icon>
       Check device support
     </button>
@@ -33,10 +33,10 @@
     <button ion-button block icon-left (tap)="onClickOpenUrl('https://github.com/TangoDev-it/cordova-plugin-vr-view-sample-app')">
       <ion-icon ios="logo-github" md="logo-github"></ion-icon>
       App source code
-    </button>
-    <button ion-button block icon-left (tap)="onClickOpenUrl('mailto:support@tangodev.it')">
+    </button> -->
+    <button ion-button block icon-left (tap)="onClickOpenUrl('mailto:info@vlearning.com.ar')">
       <ion-icon name="mail"></ion-icon>
-      Write us
+      Contacto
     </button>
   </div>
 </ion-content>

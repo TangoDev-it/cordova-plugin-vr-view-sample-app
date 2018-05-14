@@ -9,6 +9,7 @@ import {MediaItem, InputFormat, InputType, MediaType} from "./media-item";
 export class ApiProvider {
   private mediaSamplesApiUrl = 'https://cordovavrview.tangodev.it/media-samples-api.php';
   private infoTextApiUrl = 'https://cordovavrview.tangodev.it/info-text-api.php';
+ // private infoTextApiUrl = 'Hola';
 
   constructor(public http: Http) {}
 
