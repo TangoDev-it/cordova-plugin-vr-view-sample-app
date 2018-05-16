@@ -1,0 +1,14 @@
+media-sample-item {
+    .img-container {
+        position: relative;
+        .play-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 64px;
+            margin-left: -32px;
+            margin-top: -32px;
+            opacity: 0.9;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Revolución de Mayo VR",
+  "app_id": "cc286502",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
+
