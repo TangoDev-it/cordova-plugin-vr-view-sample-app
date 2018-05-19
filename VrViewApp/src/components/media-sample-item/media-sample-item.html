@@ -1,7 +1,7 @@
 <ion-card>
   <div class="img-container">
     <img [src]="mediaSample.previewUrl"/>
-    <img class="play-indicator" 
+    <img class="play-indicator"
       [src]="mediaSample.type == 'VIDEO' ? 'assets/images/play.png' : 'assets/images/panorama.png'" />
   </div>
   <ion-list>
@@ -10,22 +10,4 @@
       {{ mediaSample.name }}
     </ion-item>
   </ion-list>
-
-  <ion-row>
-    <ion-col center text-center>
-      <ion-note>
-        {{mediaSample | mediaSampleIsLocal}}
-      </ion-note>
-    </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        {{mediaSample | mediaSampleInputType}}
-      </ion-note>
-    </ion-col>
-    <ion-col center text-center [hidden]="mediaSample.type!='VIDEO'">
-      <ion-note>
-        {{mediaSample | mediaSampleInputFormat}}
-      </ion-note>
-    </ion-col>
-  </ion-row>
 </ion-card>

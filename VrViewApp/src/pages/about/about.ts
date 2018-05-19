@@ -33,7 +33,7 @@ export class AboutPage {
     .subscribe(
       infoText => {
         this.isLoading = false;
-        this.infoText = this.sanitizer.bypassSecurityTrustHtml('<img src="../../assets/images/LOGO.png" alt="Virtual Learning" style="display: block; margin: 0 auto;">');
+        this.infoText = this.sanitizer.bypassSecurityTrustHtml('<img src="../../assets/images/logo.png" alt="Virtual Learning" style="display: block; margin: 0 auto;">');
         this.errorMessage = null;
       },
       error => {
