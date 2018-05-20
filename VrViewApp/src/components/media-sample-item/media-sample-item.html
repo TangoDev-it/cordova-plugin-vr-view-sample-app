@@ -1,0 +1,13 @@
+<ion-card>
+  <div class="img-container">
+    <img [src]="mediaSample.previewUrl"/>
+    <img class="play-indicator"
+      [src]="mediaSample.type == 'VIDEO' ? 'assets/images/play.png' : 'assets/images/panorama.png'" />
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-icon [name]="mediaSample.type == 'VIDEO' ? 'videocam' : 'image'" color="primary" item-start></ion-icon>
+      {{ mediaSample.name }}
+    </ion-item>
+  </ion-list>
+</ion-card>
